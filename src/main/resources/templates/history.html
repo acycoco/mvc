@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Historys</title>
+</head>
+<body>
+<div th:if="${historyCount}">아직 기록이 없습니다.</div>
+<div th:unless="${historyCount}" th:each="numbers: ${historyOfNumbers}">
+    <span th:each="num: ${numbers}">
+      [[${num}]] -
+  </span>
+</div>
+<p><a href="http://localhost:8080/hits">돌아가기</a></p>
+</body>
+</html>
